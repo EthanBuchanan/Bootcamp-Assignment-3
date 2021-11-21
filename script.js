@@ -107,7 +107,17 @@ function generatePassword(){
     password += newChar;
   }
 
-  return password;
+
+  var randomizedPassword = [];
+  password = password.split("");
+
+  while (password.length > 0){
+    var index = Math.floor(Math.random() * password.length);
+    randomizedPassword.push(password[index]);
+    password.splice(index,1);
+  }
+
+  return randomizedPassword.join("");
 }
 
 // Write password to the #password input
