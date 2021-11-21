@@ -105,7 +105,6 @@ function generatePassword(){
   {
     var newChar = availableCharTypes[Math.floor( Math.random() * availableCharTypes.length)];
     password += newChar;
-    console.log(availableCharTypes.length);
   }
 
   return password;
